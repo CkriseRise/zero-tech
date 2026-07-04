@@ -340,3 +340,49 @@ sudo vim /var/www/html/index.nginx-debian.html
 3. 用 Vim 修改文件内容
 4. Nginx 继续对外提供这个文件
 5. 浏览器刷新，公网页面内容发生了变化
+
+## Git
+
+~~~cmd
+#1.确认 Git 已安装
+git --version
+
+#2.配置提交身份（每台电脑一次）
+#先检查是否已配置：
+git config --global user.name
+git config --global user.email
+#如果未配置，执行：
+git config --global user.name "你的名字"
+git config --global user.email "你的邮箱"
+
+#3.初始化仓库
+#进入项目目录并初始化：
+cd ~/zero-to-tech
+git init
+#然后查看状态：
+git status
+
+#4.先配置忽略规则（.gitignore）
+#在项目根目录新建 .gitignore，写入需要git忽视追踪的文件
+#这里有个关键点：
+#.gitignore 本身应该提交（它是项目规则）
+#.git 不需要写进 .gitignore（Git 会自动管理）
+
+#5.提交
+#加入至暂存区
+git add 文件名
+#全部加入至暂存区
+git add .
+
+#执行提交
+git commit -m "第一次提交"
+
+#6.查看提交日志
+git log
+git log --oneline
+
+#7.回退版本
+git checkout 版本编号
+
+~~~
+
