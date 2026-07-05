@@ -1,17 +1,23 @@
-# 忽略日志文件
-*.log
-
-# 忽略所有编译生成的可执行文件
-*.exe
-
-# 忽略特定目录及其内容
-/build/
-
-# 忽略特定配置文件
-/config/database.yml
-
 # 忽略笔记
 Note.md
 Note.assets/
+
+# dependencies
 node_modules/
+
+# next.js
+.next/
+out/
+
+# production
+build/
 dist/
+
+# editor
+.vscode/*
+!.vscode/extensions.json
+
+# misc
+.DS_Store
+*.log
+.env*
